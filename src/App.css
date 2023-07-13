@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #2c3e50; /* Основной цвет */
+    --secondary-color: #e74c3c; /* Вторичный цвет */
+    --accent-color: #3498db; /* Акцентный цвет */
+    --background-color: #f2f2f2; /* Цвет фона */
+    --text-color: #333; /* Цвет текста */
+}
+
+.app-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 0.2fr auto;
+    grid-template-areas:
+    'h h'
+    'n c';
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.header {
+    grid-area: h;
+    background-color: var(--primary-color);
+    padding: 20px;
+}
+
+.header img {
+    width: 50px;
+}
+
+.nav {
+    grid-area: n;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    grid-area: c;
+}
