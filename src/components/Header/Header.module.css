@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    grid-area: h;
+    background-color: var(--primary-color);
+
+}
+
+.logo {
+    width: 200px;
+}
+
+.ul {
+    display: flex;
+    width: 700px;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    color: white;
+}
+
+.header ul li a {
+    color: white;
+    font-size: 2em;
+}
