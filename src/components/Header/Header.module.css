@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #2c3e50; /* Основной цвет */
+    --secondary-color: #e74c3c; /* Вторичный цвет */
+    --accent-color: #3498db; /* Акцентный цвет */
+    --background-color: #f2f2f2; /* Цвет фона */
+    --text-color: #333; /* Цвет текста */
+}
+
 .header {
     display: flex;
     grid-area: h;
@@ -6,7 +14,7 @@
 }
 
 .logo {
-    width: 200px;
+    width: 265px;
 }
 
 .ul {

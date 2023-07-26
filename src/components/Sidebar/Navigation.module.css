@@ -6,21 +6,16 @@
     --text-color: #333; /* Цвет текста */
 }
 
-.app-wrapper {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 0.2fr auto;
-    grid-template-areas:
-    'h h'
-    'n c';
-    min-height: 100vh;
-    margin: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+.nav {
+    grid-area: n;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px;
+    font-size: 2em;
 }
 
-
-
-.profile {
-    grid-area: c;
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
 }
