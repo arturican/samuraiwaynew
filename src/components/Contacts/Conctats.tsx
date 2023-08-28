@@ -4,7 +4,7 @@ import Services from "../Services/Services";
 const Conctats = () => {
     return (
         <div>
-            Conctats
+            Conctats lol
         </div>
     );
 };
