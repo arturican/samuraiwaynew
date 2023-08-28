@@ -1,0 +1,54 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 50%; /* Ширина в процентах или в пикселях */
+    height: 150px; /* Высота в пикселях */
+    padding: 10px; /* Внутренние отступы вокруг текста */
+    margin: 10px auto 10px auto;
+    font-size: 16px; /* Размер шрифта */
+    border: 1px solid #ccc; /* Граница с отступом */
+    border-radius: 4px; /* Закругление углов */
+    resize: vertical; /* Разрешение изменения высоты */
+}
+
+
+/* Изменение стиля при фокусе */
+textarea:focus {
+    border-color: #007bff; /* Изменение цвета границы при фокусе */
+    outline: none; /* Убрать контур фокуса */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+button {
+    width: 150px;
+    padding: 10px 20px; /* Внутренние отступы сверху и снизу, слева и справа */
+    font-size: 16px; /* Размер шрифта */
+    border: none; /* Убрать границу */
+    border-radius: 4px; /* Закругление углов */
+    cursor: pointer; /* Изменение вида курсора при наведении */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавные переходы при изменении цветов */
+    margin: 5px auto 10px auto ;
+}
+
+/* Изменение стиля при наведении */
+button:hover {
+    background-color: #0056b3; /* Изменение цвета фона при наведении */
+    color: #fff; /* Изменение цвета текста при наведении */
+}
+
+/* Изменение стиля при нажатии */
+button:active {
+    background-color: #004499; /* Изменение цвета фона при нажатии */
+    color: #fff; /* Изменение цвета текста при нажатии */
+}
+
+/* Изменение стиля при фокусе */
+button:focus {
+    outline: none; /* Убрать контур фокуса */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}

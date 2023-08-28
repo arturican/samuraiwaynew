@@ -6,16 +6,56 @@ const Navigation = () => (
     <nav className={s.nav}>
         <ul>
             <li>
-               <NavLink to={'/profile'}>Profile</NavLink>
+                <NavLink
+                    to={'/profile'}
+                    style={({isActive, isPending}) => {
+                        return {
+                            color: isActive ? "gold" : "",
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Profile
+                </NavLink>
             </li>
             <li>
-                <NavLink to={'/dialogs'}>Dialogs</NavLink>
+                <NavLink
+                    to={'/dialogs'}
+                    style={({isActive, isPending}) => {
+                        return {
+                            color: isActive ? "gold" : "",
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Dialogs
+                </NavLink>
             </li>
             <li>
-                <a href='#'>Services</a>
+                <NavLink
+                    to={'/services'}
+                    style={({isActive, isPending}) => {
+                        return {
+                            color: isActive ? "gold" : "",
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Services
+                </NavLink>
             </li>
             <li>
-                <a href='#'>Contacts</a>
+                <NavLink
+                    to={'/contacts'}
+                    style={({isActive, isPending}) => {
+                        return {
+                            color: isActive ? "gold" : "",
+                            fontWeight: isActive ? "bold" : "",
+                        };
+                    }}
+                >
+                    Contacts
+                </NavLink>
             </li>
         </ul>
     </nav>

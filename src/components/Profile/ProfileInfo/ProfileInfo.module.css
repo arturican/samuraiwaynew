@@ -1,0 +1,25 @@
+.profileInfo {
+    display: flex;
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Размер шрифта */
+    line-height: 1.5; /* Межстрочный интервал */
+    color: #333; /* Цвет текста */
+}
+
+img {
+    width: 400px;
+    padding: 10px;
+    background-size: cover; /* Заполнение области фотографией */
+    border-radius: 8px; /* Закругление углов фотографии */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень блока */
+    margin: 10px;
+}
+
+p {
+    background-color: #007bff;;
+    color: white;
+    font-size: 1.5em;
+    font-family: Helvetica;
+    border-radius: 10px;
+    padding: 20px;
+}

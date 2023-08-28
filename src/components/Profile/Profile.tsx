@@ -1,11 +1,11 @@
 import React from 'react';
 import Mypost from "./Mypost/Mypost";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
         <div>
-            <textarea></textarea>
-            <button>Добавить пост</button>
+            <ProfileInfo/>
             <Mypost/>
         </div>
 
