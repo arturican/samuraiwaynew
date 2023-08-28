@@ -1,20 +1,21 @@
 import React from 'react';
 import s from './Navigation.module.css'
+import {NavLink} from "react-router-dom";
 
 const Navigation = () => (
     <nav className={s.nav}>
         <ul>
             <li>
-                <a href='#'>Главная</a>
+               <NavLink to={'/profile'}>Profile</NavLink>
             </li>
             <li>
-                <a href='#'>О нас</a>
+                <NavLink to={'/dialogs'}>Dialogs</NavLink>
             </li>
             <li>
-                <a href='#'>Услуги</a>
+                <a href='#'>Services</a>
             </li>
             <li>
-                <a href='#'>Контакты</a>
+                <a href='#'>Contacts</a>
             </li>
         </ul>
     </nav>
