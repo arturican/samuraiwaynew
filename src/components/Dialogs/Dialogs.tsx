@@ -33,7 +33,7 @@ export const Dialogs = () => {
             </div>
             <div className={s.message}>
                 <Message message={'Hi'}/>
-                <Message message={'Lol kek'}/>
+                <Message message={'Lol and kek'}/>
             </div>
         </div>
 
