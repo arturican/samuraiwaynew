@@ -2,15 +2,15 @@ import React from 'react';
 import s from './Post.module.css'
 
 
-type PostPropsType = {
+type PostProps = {
     img: string
     text: string
 }
-const Post = (props: PostPropsType) => {
+const Post = (props: PostProps) => {
     return (
         <div className={s.post}>
             <img className={s.avatar} src={props.img}
-                 alt='Mypost Image'/>
+                 alt='MyPost Image'/>
             <p className={s.text}>{props.text}</p>
         </div>
     );
