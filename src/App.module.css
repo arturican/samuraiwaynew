@@ -6,7 +6,7 @@
     --text-color: #333; /* Цвет текста */
 }
 
-.app-wrapper {
+.appWrapper {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 0.2fr auto;
@@ -19,8 +19,3 @@
     color: var(--text-color);
 }
 
-
-
-.profile {
-    grid-area: c;
-}
