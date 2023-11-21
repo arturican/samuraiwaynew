@@ -4,7 +4,7 @@ const Header = () => (
     <header className={s.header}>
         <img className={s.logo} src='https://www.logodesign.net/images/nature-logo.png' alt='Logo'/>
         <ul className={s.ul}>
-            <li className={s.li}>
+            <li>
                 <a href='#'>Главная</a>
             </li>
             <li>
