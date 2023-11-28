@@ -2,13 +2,17 @@ import React from 'react';
 import s from './App.module.css';
 import Header from "./components/Header/Header";
 import Navigation from "./components/Sidebar/Navigation";
-import {MyPost} from "./components/Profile/MyPost";
+import {Profile} from "./components/Profile/Profile";
+import {Dialogs} from "./components/Dialogs/Dialogs";
 
 const App = () => (
     <div className={s.appWrapper}>
         <Header />
         <Navigation/>
-        <MyPost/>
+        <div className={s.appWrapperContent}>
+            <Dialogs/>
+            {/*<Profile/>*/}
+        </div>
     </div>
 );
 
