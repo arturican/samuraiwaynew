@@ -14,8 +14,21 @@
     font-size: 2em;
 }
 
-.nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 1em;
+.nav a {
+    color: #007bff; /* Цвет текста для ссылок */
+    text-decoration: none; /* Убираем подчеркивание по умолчанию */
+    transition: color 0.3s ease; /* Анимация при изменении цвета текста */
+}
+
+.nav a:hover {
+    color: #0056b3; /* Цвет текста для ссылок при наведении */
+}
+
+.nav a.active {
+    color: #7fb8f1;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
 }
