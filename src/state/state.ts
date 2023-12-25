@@ -1,6 +1,12 @@
 import {v1} from "uuid";
+import {PostProps} from "../components/Profile/Profile";
 
-export const state = {
+
+export type StateProps = {
+    post: PostProps[]
+}
+
+export const state: StateProps = {
     post: [
         {
             id: v1(),
