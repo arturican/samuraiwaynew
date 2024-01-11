@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca40dddb-b62c-4be5-a514-d93dc2d8de25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/state.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +24,7 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -41,22 +49,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "way__samurai",
-    "javascript.nodejs.core.library.configured.version": "20.9.0",
-    "javascript.nodejs.core.library.typings.version": "20.9.0",
+    "javascript.nodejs.core.library.configured.version": "21.1.0",
+    "javascript.nodejs.core.library.typings.version": "20.11.0",
     "last_opened_file_path": "/home/art/edu/todo",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "/home/art/.nvm/versions/node/v21.1.0/bin/node",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.nodejs",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "ts.external.directory.path": "/opt/WebStorm-232.10203.14/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Dialogs/Message" />
       <recent name="$PROJECT_DIR$/src/state" />
       <recent name="C:\edu\samuraiwaynew\src\components" />
       <recent name="C:\edu\samuraiwaynew\src" />
@@ -77,6 +87,7 @@
       <workItem from="1703402954224" duration="26000" />
       <workItem from="1703527155514" duration="3590000" />
       <workItem from="1703607029774" duration="16000" />
+      <workItem from="1704985512345" duration="2902000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,6 @@ const App = () => (
         <Header/>
         <Navigation/>
         <div className={s.appWrapperContent}>
-            <h1>Hello, world!</h1>
             <Outlet/>
         </div>
     </div>

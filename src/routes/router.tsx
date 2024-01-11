@@ -21,7 +21,7 @@ export const router = createBrowserRouter([{
         },
         {
             path: '/dialogs',
-            element: <Dialogs/>
+            element: <Dialogs message={state.message}/>
         },
         {
             path: '/page/error',
