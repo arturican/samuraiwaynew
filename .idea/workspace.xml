@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca40dddb-b62c-4be5-a514-d93dc2d8de25" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/PageOne.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/PageThree.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/PageTwo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/state.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/dataState.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +43,7 @@
     "git-widget-placeholder": "way__samurai",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.0",
-    "last_opened_file_path": "/home/art/edu/samuraiwaynew",
+    "last_opened_file_path": "/home/art/edu/todo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,7 +75,8 @@
       <workItem from="1701873937285" duration="25000" />
       <workItem from="1702457764245" duration="96000" />
       <workItem from="1703402954224" duration="26000" />
-      <workItem from="1703527155514" duration="2866000" />
+      <workItem from="1703527155514" duration="3590000" />
+      <workItem from="1703607029774" duration="16000" />
     </task>
     <servers />
   </component>
