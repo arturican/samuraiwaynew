@@ -3,7 +3,7 @@ import App from "../App";
 import {Error404} from "../components/Error404/Error404";
 import {Profile} from "../components/Profile/Profile";
 import {Dialogs} from "../components/Dialogs/Dialogs";
-import {state} from "../state/state";
+import {addPost, state, updateNewPostText} from "../state/state";
 
 
 
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([{
         {
             path: '/profile',
             element: (
-                <Profile post={state.post}/>
+                <Profile post={state.post} addPost={addPost} newPostText={state.newPostText} updateNewPostText={updateNewPostText}/>
             )
         },
         {

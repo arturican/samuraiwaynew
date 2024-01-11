@@ -1,9 +1,11 @@
 import {v1} from "uuid";
 import {PostProps} from "../components/Profile/Profile";
+import {rerenderEntireTree} from "../render";
 
 
 export type StateProps = {
     post: PostProps[]
+    newPostText: string
     message: any
 }
 
@@ -25,6 +27,7 @@ export const state: StateProps = {
                 ' #графическийдизайн #творчество'
         },
     ],
+    newPostText: 'lol',
     message: [
         {
             id: v1(),
@@ -41,3 +44,22 @@ export const state: StateProps = {
 
     ]
 }
+
+export let addPost = (value: string) => {
+    let newPost = {
+        id: v1(),
+        like: 0,
+        text: state.newPostText,
+        img: 'http://tinyurl.com/yfm49k2p'
+
+    }
+     state.post.push(newPost)
+    rerenderEntireTree()
+}
+
+export let updateNewPostText = (value: string) => {
+    state.newPostText = value
+    rerenderEntireTree()
+}
+
+console.log(state)
