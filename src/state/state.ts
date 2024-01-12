@@ -1,12 +1,18 @@
 import {v1} from "uuid";
 import {PostProps} from "../components/Profile/Profile";
-import {rerenderEntireTree} from "../render";
+
+
+
 
 
 export type StateProps = {
     post: PostProps[]
     newPostText: string
     message: any
+}
+
+let rerenderEntireTree = (state: StateProps) => {
+    console.log(state)
 }
 
 export const state: StateProps = {
@@ -54,12 +60,14 @@ export let addPost = (value: string) => {
 
     }
      state.post.push(newPost)
-    rerenderEntireTree()
+    rerenderEntireTree(state)
 }
 
 export let updateNewPostText = (value: string) => {
     state.newPostText = value
-    rerenderEntireTree()
+    rerenderEntireTree(state)
 }
 
-console.log(state)
+export const subscriber = (observer: any) => {
+    rerenderEntireTree = observer
+}
