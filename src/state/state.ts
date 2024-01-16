@@ -53,16 +53,18 @@ export const state: StateProps = {
     ]
 }
 
-export let addPost = (value: string) => {
+export let addPost = () => {
     let newPost = {
         id: v1(),
         like: 0,
-        text: value,
+        text: state.pageProfile.newPostText,
         img: 'http://tinyurl.com/yfm49k2p'
 
     }
     state.pageProfile.post.push(newPost)
+    console.log(state.pageProfile.post)
     rerenderEntireTree()
+
 }
 
 export let updateNewPostText = (value: string) => {
@@ -70,4 +72,6 @@ export let updateNewPostText = (value: string) => {
     console.log(state.pageProfile.newPostText)
     rerenderEntireTree()
 }
+
+
 

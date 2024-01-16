@@ -19,16 +19,14 @@ export type PostProps = {
 
 export const Profile = (props: ProfileProps) => {
     let addPost = () => {
-
         props.addPost(props.newPostText)
-        console.log(props.newPostText)
     }
     let onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
           props.updateNewPostText(e.currentTarget.value)
     }
     return (<div className={s.profile}>
         {props.post.map(el => <Post key={el.id} img={el.img} text={el.text} like={el.like}/>)}
-        <textarea value={props.newPostText} onChange={onChangeText}/>
+        <textarea value={props.newPostText} onChange={onChangeText}></textarea>
         <button onClick={addPost}>add post</button>
     </div>)
 };
