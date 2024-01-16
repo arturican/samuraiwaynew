@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ca40dddb-b62c-4be5-a514-d93dc2d8de25" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/render.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/state.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +57,7 @@
     "nodejs_interpreter_path": "wsl://Ubuntu@/home/art/.nvm/versions/node/v20.10.0/bin/node",
     "nodejs_package_manager_path": "yarn",
     "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -86,6 +87,7 @@
       <workItem from="1704985512345" duration="3558000" />
       <workItem from="1704993105141" duration="6138000" />
       <workItem from="1705054802842" duration="1682000" />
+      <workItem from="1705396494875" duration="1729000" />
     </task>
     <servers />
   </component>

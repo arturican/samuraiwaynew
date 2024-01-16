@@ -16,7 +16,7 @@ export const router = createBrowserRouter([{
         {
             path: '/profile',
             element: (
-                <Profile post={state.post} addPost={addPost} newPostText={state.newPostText} updateNewPostText={updateNewPostText}/>
+                <Profile post={state.pageProfile.post} addPost={addPost} newPostText={state.pageProfile.newPostText} updateNewPostText={updateNewPostText}/>
             )
         },
         {
