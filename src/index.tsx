@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
-import {App} from "./App";
 import {BrowserRouter} from "react-router-dom";
-import {state, StateProps, subscribe} from "./state/state";
+import {store} from "./state/state";
+import {App} from "./App";
 
 
 const root = ReactDOM.createRoot(
@@ -17,5 +17,4 @@ export const rerenderEntireTree = () => {
 };
 rerenderEntireTree()
 
-
-subscribe(rerenderEntireTree)
+store.subscribe(rerenderEntireTree)
