@@ -68,7 +68,7 @@ export let addPost = () => {
 }
 
 export let updateNewPostText = (value: string) => {
-    state.pageProfile.newPostText += value
+    state.pageProfile.newPostText = value
     console.log(state.pageProfile.newPostText)
     rerenderEntireTree()
 }

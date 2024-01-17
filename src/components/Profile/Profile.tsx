@@ -20,6 +20,7 @@ export type PostProps = {
 export const Profile = (props: ProfileProps) => {
     let addPost = () => {
         props.addPost(props.newPostText)
+        props.updateNewPostText('')
     }
     let onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
           props.updateNewPostText(e.currentTarget.value)
