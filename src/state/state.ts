@@ -1,6 +1,9 @@
 import {v1} from "uuid";
 import {PostProps} from "../components/Profile/Profile";
-import {rerenderEntireTree} from "../index";
+
+let rerenderEntireTree = () => {
+    console.log('state change')
+}
 
 
 export type StateProps = {
@@ -53,7 +56,7 @@ export const state: StateProps = {
     ]
 }
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: v1(),
         like: 0,
@@ -67,10 +70,14 @@ export let addPost = () => {
 
 }
 
-export let updateNewPostText = (value: string) => {
+export const updateNewPostText = (value: string) => {
     state.pageProfile.newPostText = value
     console.log(state.pageProfile.newPostText)
     rerenderEntireTree()
+}
+
+export const subscribe = (observer: any) => {
+    rerenderEntireTree=observer
 }
 
 
