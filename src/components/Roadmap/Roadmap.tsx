@@ -13,7 +13,10 @@ export const Roadmap = () => {
                                                        dispatch={store.dispatch.bind(store)}
                                                        newPostText={store.getState().pageProfile.newPostText}
             />}/>
-            <Route path={'/dialogs'} element={<Dialogs message={store.getState().message}/>}/>
+            <Route path={'/dialogs'} element={<Dialogs message={store.getState().pageDialogs.message}
+                                                       dispatch={store.dispatch.bind(store)}
+                                                       newMessageText={store.getState().pageDialogs.newMessageText}
+            />}/>
             <Route path={'/*'} element={<Navigate to={'/error404'}/>}/>
             <Route path={'/error404'} element={<Error404/>}/>
         </Routes>

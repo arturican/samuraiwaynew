@@ -23,7 +23,11 @@ type GlobalStateType = {
         post: PostType[];
         newPostText: string;
     };
-    message: MessageType[];
+    pageDialogs: {
+        message: MessageType[];
+        newMessageText: string
+    }
+
 };
 
 // Тип для функции rerenderEntireTree
@@ -69,21 +73,23 @@ export const store: StoreType = {
         },
 
 
-        message: [
-            {
-                id: v1(),
-                name: 'Artur',
-                img: 'https://clck.ru/37dCXs',
-                text: 'Привет, Диляра'
-            },
-            {
-                id: v1(),
-                name: 'Dilyara',
-                img: 'http://tinyurl.com/yfm49k2p',
-                text: 'Привет, Артур'
-            },
-
-        ]
+        pageDialogs: {
+            message: [
+                {
+                    id: v1(),
+                    name: 'Artur',
+                    img: 'https://clck.ru/37dCXs',
+                    text: 'Привет, Диляра'
+                },
+                {
+                    id: v1(),
+                    name: 'Dilyara',
+                    img: 'http://tinyurl.com/yfm49k2p',
+                    text: 'Привет, Артур'
+                },
+            ],
+            newMessageText: ''
+        }
     },
     getState() {
         return this._state
@@ -117,6 +123,19 @@ export const store: StoreType = {
             this._callSubscribe()
         }else if (action.type === 'UPDATE-NEW-POST-TEXT'){
             this._state.pageProfile.newPostText = action.value
+            this._callSubscribe()
+        }else if (action.type === 'ADD-MESSAGE'){
+            let newMessage = {
+                id: v1(),
+                name: 'Dilyara',
+                img: 'http://tinyurl.com/yfm49k2p',
+                text: this._state.pageDialogs.newMessageText,
+            }
+            this._state.pageDialogs.message.push(newMessage)
+            this._state.pageDialogs.newMessageText = ''
+            this._callSubscribe()
+        }else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT'){
+            this._state.pageDialogs.newMessageText = action.value
             this._callSubscribe()
         }
     },
