@@ -1,6 +1,6 @@
 import {v1} from "uuid";
-import {ActionsType} from "./ActionCreater";
-
+import {ProfileActionsType, profileReducer} from "./reducer/profile-reducer";
+import {DialogsActionsType, dialogsReducer} from "./reducer/dialogs-reducer";
 
 
 type PostType = {
@@ -18,7 +18,7 @@ type MessageType = {
 };
 
 // Тип для глобального состояния
-type GlobalStateType = {
+export type GlobalStateType = {
     pageProfile: {
         post: PostType[];
         newPostText: string;
@@ -30,9 +30,18 @@ type GlobalStateType = {
 
 };
 
+export type ProfileStateType = {
+        post: PostType[];
+        newPostText: string;
+}
+
+export type DialogsStateType = {
+        message: MessageType[];
+        newMessageText: string
+}
+
 // Тип для функции rerenderEntireTree
 type CallSubscribe = () => void;
-
 
 
 // Определение типа для Store
@@ -42,9 +51,11 @@ type StoreType = {
     getState: () => GlobalStateType;
     addPost: () => void;
     updateNewPostText: (value: string) => void;
-    dispatch:(action: ActionsType) => void
+    dispatch: (action: ActionsType) => void
     subscribe: (observer: CallSubscribe) => void;
 };
+
+export type ActionsType = ProfileActionsType | DialogsActionsType
 
 export const store: StoreType = {
     _callSubscribe() {
@@ -110,34 +121,9 @@ export const store: StoreType = {
         this._callSubscribe()
     },
     dispatch(action: ActionsType) {
-        if (action.type === 'ADD-POST'){
-            let newPost = {
-                id: v1(),
-                like: 0,
-                text: this._state.pageProfile.newPostText,
-                img: 'http://tinyurl.com/yfm49k2p'
-
-            }
-            this._state.pageProfile.post.push(newPost)
-            this.updateNewPostText('')
-            this._callSubscribe()
-        }else if (action.type === 'UPDATE-NEW-POST-TEXT'){
-            this._state.pageProfile.newPostText = action.value
-            this._callSubscribe()
-        }else if (action.type === 'ADD-MESSAGE'){
-            let newMessage = {
-                id: v1(),
-                name: 'Dilyara',
-                img: 'http://tinyurl.com/yfm49k2p',
-                text: this._state.pageDialogs.newMessageText,
-            }
-            this._state.pageDialogs.message.push(newMessage)
-            this._state.pageDialogs.newMessageText = ''
-            this._callSubscribe()
-        }else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT'){
-            this._state.pageDialogs.newMessageText = action.value
-            this._callSubscribe()
-        }
+        this._state.pageProfile = profileReducer(this._state.pageProfile, action)
+        this._state.pageDialogs = dialogsReducer(this._state.pageDialogs, action)
+        this._callSubscribe()
     },
     subscribe(observer: any) {
         this._callSubscribe = observer

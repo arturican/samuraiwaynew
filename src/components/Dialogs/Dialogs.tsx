@@ -1,17 +1,17 @@
 import React, {ChangeEvent} from 'react';
 import {Message} from "./Message/Message";
 import {
-    ActionsType,
     addMessageAC,
     updateNewMessageTextAC,
 } from "../../state/ActionCreater";
+import {DialogsActionsType} from "../../state/reducer/dialogs-reducer";
 
 
 
 
 export type DialogsProps = {
     message: MessageProps[]
-    dispatch: (action: ActionsType) => void
+    dispatch: (action: DialogsActionsType) => void
     newMessageText: string
 }
 
@@ -24,7 +24,7 @@ export type MessageProps = {
 
 
 export const Dialogs = (props: DialogsProps) => {
-    let addPost = () => {
+    let addMessage = () => {
         props.dispatch(addMessageAC())
     }
     let onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -39,7 +39,7 @@ export const Dialogs = (props: DialogsProps) => {
                          text={el.text}
                          name={el.name}/>)}
             <textarea value={props.newMessageText} onChange={onChangeText}></textarea>
-            <button onClick={addPost}>send</button>
+            <button onClick={addMessage}>send</button>
         </div>
     );
 };

@@ -1,14 +1,15 @@
 import React, {ChangeEvent} from 'react';
 import s from './Profile.module.css'
 import Post from "./Post/Post";
-import {ActionsType, addPostAC, updateNewPostTextAC} from "../../state/ActionCreater";
-import {type} from "os";
+import {ProfileActionsType, addPostAC, updateNewPostTextAC} from "../../state/reducer/profile-reducer";
+
+
 
 
 export type ProfileProps = {
     post: PostProps[]
     newPostText: string
-    dispatch: (action: ActionsType) => void
+    dispatch: (action: ProfileActionsType) => void
 }
 
 export type PostProps = {

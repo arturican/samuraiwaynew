@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
 import {BrowserRouter} from "react-router-dom";
-import {store} from "./state/state";
+import {store} from "./state/store";
 import {App} from "./App";
 
 
