@@ -1,13 +1,14 @@
 import React, {ChangeEvent} from 'react';
 import s from './Profile.module.css'
 import Post from "./Post/Post";
+import {ActionsType} from "../../state/ActionCreater";
+import {type} from "os";
 
 
 export type ProfileProps = {
     post: PostProps[]
     newPostText: string
-    addPost: (value: string) => void
-    updateNewPostText: (value: string) => void
+    dispatch: (action: ActionsType) => void
 }
 
 export type PostProps = {
@@ -19,11 +20,12 @@ export type PostProps = {
 
 export const Profile = (props: ProfileProps) => {
     let addPost = () => {
-        props.addPost(props.newPostText)
-        props.updateNewPostText('')
+        props.dispatch({type: "ADD-POST"})
+
+
     }
     let onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
-          props.updateNewPostText(e.currentTarget.value)
+          props.dispatch({type:'UPDATE-NEW-POST-TEXT', value: e.currentTarget.value})
     }
     return (<div className={s.profile}>
         {props.post.map(el => <Post key={el.id} img={el.img} text={el.text} like={el.like}/>)}

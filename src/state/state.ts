@@ -1,5 +1,6 @@
 import {v1} from "uuid";
-import {PostProps} from "../components/Profile/Profile";
+import {ActionsType} from "./ActionCreater";
+
 
 
 type PostType = {
@@ -28,6 +29,8 @@ type GlobalStateType = {
 // Тип для функции rerenderEntireTree
 type CallSubscribe = () => void;
 
+
+
 // Определение типа для Store
 type StoreType = {
     _callSubscribe: CallSubscribe;
@@ -35,6 +38,7 @@ type StoreType = {
     getState: () => GlobalStateType;
     addPost: () => void;
     updateNewPostText: (value: string) => void;
+    dispatch:(action: ActionsType) => void
     subscribe: (observer: CallSubscribe) => void;
 };
 
@@ -98,6 +102,23 @@ export const store: StoreType = {
     updateNewPostText(value: string) {
         this._state.pageProfile.newPostText = value
         this._callSubscribe()
+    },
+    dispatch(action: ActionsType) {
+        if (action.type === 'ADD-POST'){
+            let newPost = {
+                id: v1(),
+                like: 0,
+                text: this._state.pageProfile.newPostText,
+                img: 'http://tinyurl.com/yfm49k2p'
+
+            }
+            this._state.pageProfile.post.push(newPost)
+            this.updateNewPostText('')
+            this._callSubscribe()
+        }else if (action.type === 'UPDATE-NEW-POST-TEXT'){
+            this._state.pageProfile.newPostText = action.value
+            this._callSubscribe()
+        }
     },
     subscribe(observer: any) {
         this._callSubscribe = observer

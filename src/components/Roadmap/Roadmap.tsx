@@ -10,9 +10,9 @@ export const Roadmap = () => {
         <Routes>
             <Route path={'/'} element={<Navigate to={'/profile'}/>}/>
             <Route path={'/profile'} element={<Profile post={store.getState().pageProfile.post}
-                                                       addPost={store.addPost.bind(store)}
+                                                       dispatch={store.dispatch.bind(store)}
                                                        newPostText={store.getState().pageProfile.newPostText}
-                                                       updateNewPostText={store.updateNewPostText.bind(store)}/>}/>
+            />}/>
             <Route path={'/dialogs'} element={<Dialogs message={store.getState().message}/>}/>
             <Route path={'/*'} element={<Navigate to={'/error404'}/>}/>
             <Route path={'/error404'} element={<Error404/>}/>
