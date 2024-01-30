@@ -1,7 +1,26 @@
 import {ActionsType, DialogsStateType} from "../store";
 import {v1} from "uuid";
 
-export const dialogsReducer = (state: DialogsStateType, action: ActionsType): DialogsStateType => {
+let initialState = {
+    message: [
+        {
+            id: v1(),
+            name: 'Artur',
+            img: 'https://clck.ru/37dCXs',
+            text: 'Привет, Диляра'
+        },
+        {
+            id: v1(),
+            name: 'Dilyara',
+            img: 'http://tinyurl.com/yfm49k2p',
+            text: 'Привет, Артур'
+        },
+    ],
+    newMessageText: ''
+
+}
+
+export const dialogsReducer = (state: DialogsStateType = initialState, action: ActionsType): DialogsStateType => {
     switch (action.type) {
         case "ADD-MESSAGE": {
             let newMessage = {

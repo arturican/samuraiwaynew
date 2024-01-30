@@ -1,7 +1,29 @@
 import {ActionsType, ProfileStateType} from "../store";
 import {v1} from "uuid";
 
-export const profileReducer = (state: ProfileStateType, action: ActionsType): ProfileStateType => {
+
+let initialState =  {
+    post: [
+        {
+            id: v1(),
+            like: 1000,
+            img: 'http://tinyurl.com/yfm49k2p',
+            text: 'Привет! 🎨 Делюсь логотипом для благотворительного фонда. Волнительно создавать дизайн,' +
+                ' который поддержит наше сообщество. ❤️ Надеюсь, он привлечет внимание к важному проекту!' +
+                ' #графическийдизайн #логотип #благотворительность'
+        },
+        {
+            id: v1(),
+            like: 100,
+            img: 'http://tinyurl.com/yfm49k2p',
+            text: 'Искусство в каждой детали! ✨ Создаю уникальные дизайны, вдохновляясь миром вокруг. Погрузитесь в креатив!' +
+                ' #графическийдизайн #творчество'
+        },
+    ],
+        newPostText: '',
+}
+
+export const profileReducer = (state: ProfileStateType = initialState, action: ActionsType): ProfileStateType => {
     switch (action.type) {
         case "ADD-POST": {
             let newPost = {

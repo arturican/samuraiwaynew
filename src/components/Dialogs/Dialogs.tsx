@@ -1,10 +1,6 @@
 import React, {ChangeEvent} from 'react';
 import {Message} from "./Message/Message";
-import {
-    addMessageAC,
-    updateNewMessageTextAC,
-} from "../../state/ActionCreater";
-import {DialogsActionsType} from "../../state/reducer/dialogs-reducer";
+import {addMessageAC, DialogsActionsType, updateNewMessageTextAC} from "../../state/reducer/dialogs-reducer";
 
 
 

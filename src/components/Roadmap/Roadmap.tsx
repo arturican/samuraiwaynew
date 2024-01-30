@@ -1,9 +1,10 @@
 import React from 'react';
 import {Routes, Route, Navigate} from "react-router-dom";
 import {Profile} from "../Profile/Profile";
-import {store} from "../../state/store";
+
 import {Dialogs} from "../Dialogs/Dialogs";
 import {Error404} from "../Error404/Error404";
+import {store} from "../../state/redux-store";
 
 export const Roadmap = () => {
     return (
