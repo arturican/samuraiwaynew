@@ -1,19 +1,19 @@
-
 import {addPostAC, updateNewPostTextAC} from "../../state/reducer/profile-reducer";
-import {store} from "../../state/redux-store";
+import {AppRootStateType, store} from "../../state/redux-store";
 import {Profile} from "./Profile";
 import {connect} from "react-redux";
+import {Dispatch} from "redux";
 
 
 
-const mapToStateToProps  = () => {
+const mapToStateToProps  = (state: AppRootStateType) => {
     return {
-        post: store.getState().pageProfile.post,
-        newPostText: store.getState().pageProfile.newPostText
+        post: state.pageProfile.post,
+        newPostText: state.pageProfile.newPostText
     }
 }
 
-const mapToDispatchProps = (dispatch: any) => {
+const mapToDispatchProps = (dispatch: Dispatch) => {
     return {
         addPost:() => {
             dispatch(addPostAC())
