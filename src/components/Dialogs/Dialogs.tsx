@@ -1,14 +1,11 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import {Message} from "./Message/Message";
-import {addMessageAC, DialogsActionsType, updateNewMessageTextAC} from "../../state/reducer/dialogs-reducer";
-
-
-
 
 export type DialogsProps = {
     message: MessageProps[]
-    dispatch: (action: DialogsActionsType) => void
     newMessageText: string
+    onChangeText: (text: string) => void
+    addMessage: () => void
 }
 
 export type MessageProps = {
@@ -18,14 +15,7 @@ export type MessageProps = {
     text: string
 }
 
-
 export const Dialogs = (props: DialogsProps) => {
-    let addMessage = () => {
-        props.dispatch(addMessageAC())
-    }
-    let onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        props.dispatch(updateNewMessageTextAC(e.currentTarget.value))
-    }
     return (
         <div>
             {props.message.map(el=>
@@ -34,8 +24,8 @@ export const Dialogs = (props: DialogsProps) => {
                          img={el.img}
                          text={el.text}
                          name={el.name}/>)}
-            <textarea value={props.newMessageText} onChange={onChangeText}></textarea>
-            <button onClick={addMessage}>send</button>
+            <textarea value={props.newMessageText} onChange={(e)=>props.onChangeText(e.currentTarget.value)}></textarea>
+            <button onClick={props.addMessage}>send</button>
         </div>
     );
 };

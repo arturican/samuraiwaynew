@@ -9,7 +9,8 @@ import {ProfileActionsType, addPostAC, updateNewPostTextAC} from "../../state/re
 export type ProfileProps = {
     post: PostProps[]
     newPostText: string
-    dispatch: (action: ProfileActionsType) => void
+    onChangeText: (text: string) => void
+    addPost : () => void
 }
 
 export type PostProps = {
@@ -20,16 +21,11 @@ export type PostProps = {
 }
 
 export const Profile = (props: ProfileProps) => {
-    let addPost = () => {
-        props.dispatch(addPostAC())
-    }
-    let onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
-          props.dispatch(updateNewPostTextAC(e.currentTarget.value))
-    }
+
     return (<div className={s.profile}>
         {props.post.map(el => <Post key={el.id} img={el.img} text={el.text} like={el.like}/>)}
-        <textarea value={props.newPostText} onChange={onChangeText}></textarea>
-        <button onClick={addPost}>add post</button>
+        <textarea value={props.newPostText} onChange={(event)=>props.onChangeText(event.currentTarget.value)}></textarea>
+        <button onClick={props.addPost}>add post</button>
     </div>)
 };
 
