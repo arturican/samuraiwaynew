@@ -2,7 +2,7 @@ import {ActionsType, ProfileStateType} from "../store";
 import {v1} from "uuid";
 
 
-let initialState =  {
+let initialState = {
     post: [
         {
             id: v1(),
@@ -20,7 +20,7 @@ let initialState =  {
                 ' #графическийдизайн #творчество'
         },
     ],
-        newPostText: '',
+    newPostText: '',
 }
 
 export const profileReducer = (state: ProfileStateType = initialState, action: ActionsType): ProfileStateType => {
@@ -33,14 +33,19 @@ export const profileReducer = (state: ProfileStateType = initialState, action: A
                 img: 'http://tinyurl.com/yfm49k2p'
             }
 
-            state.post.push(newPost)
-            state.newPostText = ''
-            return state
+
+            return {
+                ...state,
+                post: [...state.post, newPost],
+                newPostText: ''
+            }
 
         }
         case "UPDATE-NEW-POST-TEXT": {
-            state.newPostText = action.value
-            return state
+            return {
+                ...state,
+                newPostText: action.value
+            }
         }
         default : {
             return state

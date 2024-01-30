@@ -29,13 +29,18 @@ export const dialogsReducer = (state: DialogsStateType = initialState, action: A
                 img: 'http://tinyurl.com/yfm49k2p',
                 text: state.newMessageText,
             }
-            state.message.push(newMessage)
-            state.newMessageText = ''
-            return state
+            return {
+                ...state,
+                message: [...state.message, newMessage],
+                newMessageText: '' // Reset the newMessageText
+            };
+
         }
         case "UPDATE-NEW-MESSAGE-TEXT": {
-            state.newMessageText = action.value
-            return state
+            return {
+                ...state,
+                newMessageText: action.value
+            }
         }
         default : {
             return state
