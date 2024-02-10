@@ -58,6 +58,7 @@ export const addMessageAC = () => ({
 
 type UpdateNewPostMessageType = ReturnType<typeof updateNewMessageTextAC>
 export const updateNewMessageTextAC = (value: string) => ({
-    type: 'UPDATE-NEW-MESSAGE-TEXT',
-    value: value
-} as const)
+        type: 'UPDATE-NEW-MESSAGE-TEXT',
+        value: value
+    } as const
+ )

@@ -1,5 +1,5 @@
 import {addMessageAC, updateNewMessageTextAC} from "../../state/reducer/dialogs-reducer";
-import {AppRootStateType, store} from "../../state/redux-store";
+import {AppRootStateType} from "../../state/redux-store";
 import {Dialogs} from "./Dialogs";
 import {connect} from "react-redux";
 import {Dispatch} from "redux";
