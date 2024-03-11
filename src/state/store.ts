@@ -1,6 +1,7 @@
 import {v1} from "uuid";
 import {ProfileActionsType, profileReducer} from "./reducer/profile-reducer";
 import {DialogsActionsType, dialogsReducer} from "./reducer/dialogs-reducer";
+import {UsersActionsType} from "./reducer/users-reducer";
 
 
 type PostType = {
@@ -16,6 +17,14 @@ type MessageType = {
     img: string;
     text: string;
 };
+
+export type UsersType = {
+    id: string;
+    name: string;
+    img: string;
+    status: string;
+    followed: boolean
+}
 
 // Тип для глобального состояния
 export type GlobalStateType = {
@@ -39,6 +48,9 @@ export type DialogsStateType = {
         message: MessageType[];
         newMessageText: string
 }
+export type UsersStateType = {
+    users:  UsersType[];
+}
 
 // Тип для функции rerenderEntireTree
 type CallSubscribe = () => void;
@@ -55,7 +67,7 @@ type StoreType = {
     subscribe: (observer: CallSubscribe) => void;
 };
 
-export type ActionsType = ProfileActionsType | DialogsActionsType
+export type ActionsType = ProfileActionsType | DialogsActionsType | UsersActionsType
 
 export const store: StoreType = {
     _callSubscribe() {

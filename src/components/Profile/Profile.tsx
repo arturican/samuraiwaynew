@@ -1,7 +1,7 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import s from './Profile.module.css'
 import Post from "./Post/Post";
-import {ProfileActionsType, addPostAC, updateNewPostTextAC} from "../../state/reducer/profile-reducer";
+
 
 
 
