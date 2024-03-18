@@ -12,6 +12,9 @@ const Navigation = () => (
             <li>
                 <S.NavWrapper><NavLink to={'/dialogs'}>Dialogs</NavLink></S.NavWrapper>
             </li>
+            <li>
+                <S.NavWrapper><NavLink to={'/users'}>Users</NavLink></S.NavWrapper>
+            </li>
         </ul>
     </nav>
 );
