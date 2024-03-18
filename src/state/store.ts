@@ -21,10 +21,14 @@ type MessageType = {
 export type UsersType = {
     id: string;
     name: string;
-    img: string;
-    status: string;
-    followed: boolean
-}
+    followed: boolean;
+    status: string | null;
+    photos: {
+        small: string | null;
+        large: string | null;
+    };
+    uniqueUrlName: string | null;
+};
 
 // Тип для глобального состояния
 export type GlobalStateType = {
