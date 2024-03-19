@@ -18,17 +18,7 @@ type MessageType = {
     text: string;
 };
 
-export type UsersType = {
-    id: string;
-    name: string;
-    followed: boolean;
-    status: string | null;
-    photos: {
-        small: string | null;
-        large: string | null;
-    };
-    uniqueUrlName: string | null;
-};
+
 
 // Тип для глобального состояния
 export type GlobalStateType = {
@@ -52,9 +42,7 @@ export type DialogsStateType = {
         message: MessageType[];
         newMessageText: string
 }
-export type UsersStateType = {
-    users:  UsersType[];
-}
+
 
 // Тип для функции rerenderEntireTree
 type CallSubscribe = () => void;

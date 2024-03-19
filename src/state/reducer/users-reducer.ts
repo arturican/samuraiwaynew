@@ -1,11 +1,17 @@
-import {ActionsType, UsersStateType, UsersType} from "../store";
+import {ActionsType} from "../store";
+import {UsersState, UsersType} from "../../components/Users/UserType";
 
 
 let initialState = {
-    users: []
+    users: [],
+    pageSize: 5,
+    totalUsersCount: 21,
+    currentPage: 1
 }
 
-export const usersReducer = (state: UsersStateType = initialState, action: ActionsType): UsersStateType => {
+
+
+export const usersReducer = (state: UsersState = initialState, action: ActionsType): UsersState=> {
     switch (action.type) {
         case 'FOLLOW': {
             return {...state, users: state.users.map(u => u.id === action.id ? {...u, followed: false} : u)}
@@ -14,7 +20,13 @@ export const usersReducer = (state: UsersStateType = initialState, action: Actio
             return {...state, users: state.users.map(u => u.id === action.id ? {...u, followed: true} : u)}
         }
         case 'SET-USERS': {
-            return {...state, users: [...state.users, ...action.users]}
+            return {...state, users: [...action.users]}
+        }
+        case 'SET-CURRENT-PAGE': {
+            return  {...state, currentPage: action.currentPage}
+        }
+        case 'SET-TOTAL-USER-COUNT': {
+            return  {...state, totalUsersCount: action.totalUserCount}
         }
         default : {
             return state
@@ -23,7 +35,7 @@ export const usersReducer = (state: UsersStateType = initialState, action: Actio
     }
 }
 
-export type UsersActionsType = FollowType | UnFollowType | SetUsersType;
+export type UsersActionsType = FollowType | UnFollowType | SetUsersType | SetCurrentPageType | SetUsersTotalCountType;
 type FollowType = ReturnType<typeof followAC>
 export const followAC = (id: string) => ({
         type: 'FOLLOW',
@@ -41,5 +53,18 @@ type  SetUsersType = ReturnType<typeof setUsersAC>
 export const setUsersAC = (users: UsersType[]) => ({
         type: 'SET-USERS',
         users: users
+    } as const
+)
+type SetCurrentPageType = ReturnType<typeof setCurrentPageAC>
+export const setCurrentPageAC = (currentPage: number) => ({
+        type: 'SET-CURRENT-PAGE',
+        currentPage: currentPage
+    } as const
+)
+
+type SetUsersTotalCountType = ReturnType<typeof setUsersTotalCountAC>
+export const setUsersTotalCountAC = (totalUserCount: number) => ({
+        type: 'SET-TOTAL-USER-COUNT',
+        totalUserCount: totalUserCount
     } as const
 )
