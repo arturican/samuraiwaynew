@@ -18,10 +18,18 @@ export type UsersType = {
 };
 
 
-export type UsersProps = UsersState & {
+export type UsersApiProps = UsersState & {
     follow: (id: string) => void;
     unFollow: (id: string) => void;
     setUsers: (users: UsersType[]) => void;
     setCurrentPage: (currentPage: number) => void;
     setTotalUserCount: (totalUserCount: number) => void;
 };
+
+export type UsersProps = UsersState & {
+    follow: (id: string) => void;
+    unFollow: (id: string) => void;
+    onPageChanged: (pageNumber: number) => void
+}
+
+
